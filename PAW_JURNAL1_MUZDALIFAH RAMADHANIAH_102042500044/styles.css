@@ -1,0 +1,351 @@
+/* =========================
+   RESET
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   BODY + BACKGROUND
+========================= */
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #18181a;
+    position: relative;
+    background-color: #110c29;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(135deg, rgba(17, 12, 41, 0.78) 0%, rgba(25, 20, 56, 0.72) 100%),
+        radial-gradient(circle at 85% 15%, rgba(103, 61, 230, 0.35) 0%, transparent 50%),
+        url("bg-campus.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    transform: scale(1.05);
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    display: block;
+    margin: 0 auto 18px;
+    max-width: 160px;
+    height: auto;
+}
+
+/* =========================
+   CONTAINER & ID CARD
+========================= */
+.container,
+.id-card {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 42px 44px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 6px 0;
+    color: #18181a;
+}
+
+.subtitle {
+    text-align: center;
+    color: #797980;
+    font-size: 14px;
+    margin: 0 0 24px 0;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #222225;
+}
+
+.required {
+    color: #e23c3c;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #dedee2;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+    background: #fff;
+    color: #18181a;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #7b66ff;
+    box-shadow: 0 0 0 3px rgba(123, 102, 255, 0.2);
+}
+
+textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.error {
+    color: #e23c3c;
+    font-size: 12px;
+    font-weight: 500;
+    min-height: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 13px 24px;
+    background: #673de6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 14px rgba(103, 61, 230, 0.35);
+}
+
+button[type="submit"]:hover {
+    background: #471ea7;
+    transform: translateY(-1px);
+}
+
+.btn-lihat-data {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    color: #673de6;
+    border: 1.5px solid #7b66ff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.btn-lihat-data:hover {
+    background: #f5f6ff;
+}
+
+/* =========================
+   ALERTS
+========================= */
+.alert {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.alert-danger {
+    color: #a81c1c;
+    background: #fdeded;
+    border: 1px solid #f9c7c7;
+}
+
+.alert-success {
+    color: #0f5132;
+    background: #dcf8e3;
+    border: 1px solid #b7ebc6;
+}
+
+.alert-info {
+    color: #471ea7;
+    background: #f5f6ff;
+    border: 1px solid #9d99ff;
+}
+
+/* =========================
+   ID CARD
+========================= */
+.id-card-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.id-card-header p {
+    text-align: center;
+    color: #797980;
+    font-size: 14px;
+}
+
+.id-card-body {
+    margin-bottom: 24px;
+}
+
+.id-card-row {
+    display: flex;
+    margin-bottom: 14px;
+    font-size: 15px;
+    align-items: baseline;
+}
+
+.id-card-label {
+    width: 160px;
+    font-weight: 600;
+    color: #797980;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.id-card-value {
+    color: #18181a;
+    font-weight: 500;
+    flex: 1;
+    word-break: break-word;
+}
+
+.id-card-divider {
+    border: none;
+    border-top: 1px solid #dedee2;
+    margin: 14px 0;
+}
+
+.id-card-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #dcf8e3;
+    color: #009e5b;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-kembali {
+    display: block;
+    width: 100%;
+    padding: 13px 24px;
+    background: #673de6;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+    box-shadow: 0 4px 14px rgba(103, 61, 230, 0.35);
+}
+
+.btn-kembali:hover {
+    background: #471ea7;
+    transform: translateY(-1px);
+}
+
+.id-card-footer {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 12px;
+    color: #797980;
+    font-weight: 500;
+}
+
+/* =========================
+   LIST PENDAFTAR
+========================= */
+.pendaftar-item {
+    position: relative;
+    border: 1px solid #e5e5ec;
+    border-radius: 14px;
+    padding: 24px 22px 20px;
+    margin-bottom: 18px;
+    background: #fafaff;
+}
+
+.pendaftar-num {
+    position: absolute;
+    top: -12px;
+    left: 18px;
+    background: #673de6;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(103, 61, 230, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container,
+    .id-card {
+        padding: 25px 20px;
+    }
+
+    .id-card-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .id-card-label {
+        width: 100%;
+    }
+}
